@@ -26,5 +26,10 @@ namespace csci6710_homework5.Controllers
 
             return View();
         }
+
+        public ActionResult HowToProblem2()
+        {
+            return View();
+        }
     }
 }

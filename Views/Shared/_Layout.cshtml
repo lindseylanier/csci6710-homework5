@@ -23,10 +23,10 @@
                 <ul class="nav navbar-nav">
                     <li>@Html.ActionLink("Home", "Index", "Home")</li>
                     <li>@Html.ActionLink("Problem 1", "Index", "Problem1")</li>
-                    <li>@Html.ActionLink("Problem 2", "View", "Problem2")</li>
-                    <li>@Html.ActionLink("Problem 3", "View", "Problem3")</li>
+                    <li>@Html.ActionLink("Problem 2", "HowToProblem2", "Home")</li>
+                    <li>@Html.ActionLink("Problem 3", "Index", "Problem3")</li>
                 </ul>
-                @Html.Partial("_LoginPartial")
+  
             </div>
         </div>
     </div>
@@ -34,7 +34,7 @@
         @RenderBody()
         <hr />
         <footer>
-            <p>&copy; @DateTime.Now.Year - Lindsey Lanier</p>
+            <p>&copy; @DateTime.Now.Year - Lindsey Lanier, Layout by Bootswatch (<a href="http://bootswatch.com/flatly/">Flatly</a> )</p>
         </footer>
     </div>
 
