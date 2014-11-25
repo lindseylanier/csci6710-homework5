@@ -1,0 +1,47 @@
+﻿@model csci6710_homework5.Models.ISBNModel
+
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@{
+    ViewBag.Title = "Problem 1";
+}
+
+<h2>Problem 1</h2>
+
+<p class="text-success">Welcome to Problem 1. Enter an ISBN below for more information.</p>
+
+@using (Html.BeginForm())
+{
+    <p>
+        ISBN: @Html.TextBox("SearchString")
+        <input type="submit" value="Search" />
+    </p>
+}
+
+@if (ViewBag.ISBN != null)
+{
+    csci6710_homework5.Models.ISBNModel e = ViewBag.ISBN;
+    <table class="table table-striped table-hover">
+        <tr>
+            <th>Title</th>
+            <th>Edition</th>
+            <th>Publication Year</th>
+        </tr>
+        <tr class="info">
+            <td>@e.title</td>
+            <td>@e.edition</td>
+            <td>@e.publication_year</td>
+    </tr>
+</table>
+}
+else if (ViewBag.Error == "Title not found.")
+{
+    <div class="alert alert-dismissable alert-danger">
+        <button class="close" type="button" data-dismiss="alert">×</button>
+        <strong>Oh snap!</strong> That title was not found, try another one .
+    </div>
+}
+
+
