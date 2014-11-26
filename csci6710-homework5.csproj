@@ -198,10 +198,16 @@
     <Content Include="Content\bootstrap-theme.css" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\images\curlFriendsList.PNG" />
+    <Content Include="Content\images\curlUserInfo.PNG" />
+    <Content Include="Content\images\markFriends.PNG" />
     <Content Include="Content\images\MarkHills-FriendsList.PNG" />
     <Content Include="Content\images\MarkHills-UserInformation.PNG" />
+    <Content Include="Content\images\markInfo.PNG" />
     <Content Include="Content\images\Problem3.PNG" />
     <Content Include="Content\images\Problem3_1.PNG" />
+    <Content Include="Content\images\restFriendsList.PNG" />
+    <Content Include="Content\images\restUserInfo.PNG" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />

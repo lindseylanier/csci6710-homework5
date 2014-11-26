@@ -1,12 +1,37 @@
-﻿
-@{
+﻿@{
     ViewBag.Title = "Index";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
 <h2>Problem 3 - Consuming the Twitter API</h2>
 
-<img src="~/Content/images/Problem3.PNG" /><br /><br />
-<img src="~/Content/images/Problem3_1.PNG" /><br /><br />
-<img src="~/Content/images/MarkHills-UserInformation.PNG" /><br /><br />
-<img src="~/Content/images/MarkHills-FriendsList.PNG" /><br /><br />
+<p class="text-warning">
+The first step to this problem was to encode my [consumerKey:consumerSecret] to base64, for this I used PowerShell:<br /><br />
+    <img src="~/Content/images/Problem3_1.PNG" /><br /><br />
+After many attempts to call oath2/token using my Chrome REST Console (and continuously receiving an "authenticity_token_error"), I did some searching for how to use curl and found my bearer token this way:<br /><br />
+    <img src="~/Content/images/Problem3.PNG" /><br /><br />
+    .....and got my bearer token: {"token_type":"bearer","access_token":"AAAAAAxxxxx0"}<br /><br />
+Next, I tested the following calls to find Dr. Hills' friends list, first with curl after generating an oAuth signature..then with my REST console (both worked well):<br /><br />
+    <img src="~/Content/images/curlFriendsList.PNG" /><br />
+    <img src="~/Content/images/restFriendsList.PNG" /><br /><br />
+    ...and the results:<br />
+
+    <img src="~/Content/images/markFriends.PNG" /><br /><br />
+   
+Next, I tested the following calls to find Dr. Hills' user information, first with curl after generating an oAuth signature..then with my REST console (both worked well):<br /><br />
+    <img src="~/Content/images/curlUserInfo.PNG" /><br />
+    <img src="~/Content/images/restUserInfo.PNG" /><br /><br />
+    ...and the results:<br />
+    <img src="~/Content/images/markInfo.PNG" />
+
+
+<p class="text-danger">
+    Resources used to solve problem 3:
+    <li><a href="http://vstepic.blogspot.com/2013/02/how-to-convert-string-to-base64-and.html">How to convert string to Base64 using Powershell</a></li>
+    <li><a href="https://twittercommunity.com/t/ouath2-token-always-403/1767">Using curl</a></li>
+    <li><a href="https://dev.twitter.com/oauth/tools/signature-generator/7248093?nid=863">Generated oAuth signature generator for friends list here</a></li>
+    <li><a href="https://dev.twitter.com/oauth/tools/signature-generator/7248093?nid=800">Generated oAuth signature generator for user information here</a></li>
+    
+    
+
+</p>

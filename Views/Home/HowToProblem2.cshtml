@@ -4,16 +4,16 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<h2>My RESTFul Web Service (How To Problem 2)</h2>
+<h2>My RESTFul Web Service</h2>
 
 <p class="text-warning">
-    The calculator can be consumed in the following ways:
+    The calculator can be consumed in the following ways using a REST client:
     <br />
-    <li>GET http://csci6710-homework5.azurewebsites.net/api/problem2/Get </li>
-    <li>POST http://csci6710-homework5.azurewebsites.net/api/problem2/post?num=2 </li>
-    <li>POST http://csci6710-homework5.azurewebsites.net/api/problem2/add?num=2 </li>
-    <li>POST http://csci6710-homework5.azurewebsites.net/api/problem2/times?num=5 </li>
-    <li>DELETE http://csci6710-homework5.azurewebsites.net/api/problem2/delete </li>    
+    <li>Return the current value:  <b>GET http://csci6710-homework5.azurewebsites.net/api/problem2/Get </b></li>
+    <li>Set num as the current value:   <b>POST http://csci6710-homework5.azurewebsites.net/api/problem2/post?num=2 </b></li>
+    <li>Add num to the current value:  <b>POST http://csci6710-homework5.azurewebsites.net/api/problem2/add?num=2 </b></li>
+    <li>Multiply num by the current value:  <b> POST http://csci6710-homework5.azurewebsites.net/api/problem2/times?num=5 </b></li>
+    <li>Set the current value to 0:  <b>DELETE http://csci6710-homework5.azurewebsites.net/api/problem2/delete </b></li>    
     
 </p>
 
